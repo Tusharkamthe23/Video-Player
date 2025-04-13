@@ -3,7 +3,7 @@ from yt_dlp import YoutubeDL
 import os
 import re
 import tempfile
-yt_dlp.utils.bug_reports_message = lambda: ''
+
 
 CORRECT_PASSWORD =os.getenv("PASSWORD")
 st.set_page_config(page_title="Video Downloader", layout="centered")
