@@ -14,7 +14,7 @@ password = st.sidebar.text_input("Password", type="password")
 
 if password == CORRECT_PASSWORD:
     st.title("Video Downloader & Player")
-    st.write("This is only for education purpose")
+    st.write("This is only for educational purpose")
 
     url= st.text_input("Enter  Video URL:")
 
