@@ -68,10 +68,9 @@ if password == CORRECT_PASSWORD:
                 temp_path = os.path.join(temp_dir, f"preview.{ext}")
 
                 ydl_opts = {
-
                     'quiet': True,
                     'outtmpl': temp_path,
-                    'format': f"{selected_format['format_id']}",
+                    'format': 'best[ext=mp4][vcodec^=avc1][acodec^=mp4a]/best',
                     'http_headers': {
                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                                       'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -79,7 +78,6 @@ if password == CORRECT_PASSWORD:
                         'Accept-Language': 'en-US,en;q=0.9',
                     }
                 }
-
                 with YoutubeDL(ydl_opts) as ydl:
                     ydl.download([url])
 
